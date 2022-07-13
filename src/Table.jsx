@@ -8,7 +8,6 @@ const Table = () => {
             const response = await axios.post('https://demo1779595.mockable.io/companies', {});
             console.log(response.data.companiesList)
             setCompany(response.data.companiesList);
-            console.log(company)
         } catch (error) {
             console.log(error);
         }
@@ -31,7 +30,7 @@ const Table = () => {
         },
         {
             name: 'Verified',
-            selector: (row) => row.verified,
+            selector: (row) => row.verified.toString(),
             sortable: true,
         },
         {
@@ -48,6 +47,7 @@ const Table = () => {
     React.useEffect(() => {
         getCompany();
     }, []);
+    console.log(company)
   return (
       <DataTable title="Company Data" columns={columns} data={company} />
   )
