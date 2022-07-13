@@ -2,6 +2,9 @@
   "name": "-",
   "private": true,
   "version": "0.0.0",
+  "engines": {
+    "node": "16.14.2"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
